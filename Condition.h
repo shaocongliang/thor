@@ -1,0 +1,4 @@
+#ifndef THOR_CONDITION_H
+#define THOR_CONDITION_H
+
+#endif //THOR_CONDITION_H
