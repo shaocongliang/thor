@@ -23,7 +23,11 @@ class MutexLock : public NonCopyable {
     THOR_ASSERT(pthread_mutex_unlock(&mutex_)==0);
     unAssignHolder();
   }
+  pthread_mutex_t* getPthreadMutex(){
+    return &mutex_;
+  }
  private:
+ friend class Condition;
   void assignHolder() {
     holder_ == getThreadId();
   }
